@@ -1,0 +1,20 @@
+---
+
+# Specify the location for the log file
+export ANSIBLE_LOG_PATH=~/ansible.log
+# Enable Debug
+export ANSIBLE_DEBUG=True
+
+# Run with 4*v for connection level verbosity
+ansible-playbook -vvvv ...
+
+- name: this playbook is to create user
+  hosts: all
+  become: true
+  vars_files:
+    - user.yml
+
+  tasks:
+  - name: creating user
+    user: 
+      name: "{{ user }}"

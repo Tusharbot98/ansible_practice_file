@@ -1,0 +1,8 @@
+[webservers]
+172.31.4.12 ansible_ssh_user=ansadmin   ansible_ssh_pass=ansadmin@123
+172.31.1.179 ansible_ssh_user=ansadmin   ansible_ssh_pass=ansadmin@123
+[appservers]
+172.31.1.179 ansible_ssh_user=ansadmin   ansible_ssh_pass=ansadmin@123
+
+[dbservers]
+172.31.11.51 ansible_ssh_user=ansadmin   ansible_ssh_pass=ansadmin@1t2

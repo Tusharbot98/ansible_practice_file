@@ -1,0 +1,13 @@
+---
+- name: this playbook uninstall httpd
+  hosts: webservers
+    # bec ome: true
+  tasks:
+    - name: start https service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+    - name: uninstall httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: removed

@@ -1,0 +1,9 @@
+---
+- name: This playbook install packages
+  hosts: webservers
+  become: true
+  tasks:
+  - name: install Multiple Package
+    yum:
+      name: ['git', 'make','wget','telnet','gzip']
+      state: installed
